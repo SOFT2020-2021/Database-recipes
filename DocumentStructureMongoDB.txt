@@ -1,0 +1,81 @@
+This is how we setup the mongoDB documents structure.
+Each document type is in its own collection 
+
+
+Posts
+_id : int
+body : <text> 
+username : <username>
+date : timestamp
+
+Comments
+postid : int
+body : <text>
+username : <username>
+date : timestamp
+
+Recipes
+postid
+ingridents : amount
+
+nutrients
+postid
+nutrient : amount
+
+({_id :  getSequenceNextValue('itemId') , 'body' : <text> , 'username' : <username> , 'date' : <timestamp>})
+
+db.posts.insert(
+{ _id :  getSequenceNextValue('itemId'),
+'body' : 'Fresh seasonal berries make wonderful desserts thanks to their natural sweetness and high fiber content. Fresh berries also contain high levels of cancer-fighting antioxidants and vitamin C. Theyre delicious enough to eat alone for a quick and easy after-dinner treat, but if you want something just a little more special, individual berry crisps are easy to whip up for a fun and festive summer dessert. The berries get even sweeter when baked in the oven and taste delicious with the warm, nutty crumble topping. The great thing about these mini berry crisps is that they have built-in portion control. You can have a whole ramekin to yourself and can feel satisfied with a single portion. Top yours with a scoop of vanilla ice cream, a dollop of yogurt, or whipped cream!','username' : 'Janudanie','date' : 'timestamp'})
+
+https://www.verywellfit.com/vietnamese-vermicelli-with-sweet-chile-sauce-and-caramelized-pork-4147882
+db.posts.insert(
+{ _id :  getSequenceNextValue('itemId'),
+'body' : 'Rice vermicelli are called “bun” in Vietnamese. Bun should be freshly cooked, yet cool, while the minced pork topping is warm. The cooking techniques involved are actually very basic, making this special recipe within the reach of novice cooks, but do allow plenty of time for prepping the vegetables so you won\'t feel rushed. Recipes like this lend themselves to communal preparation—make it together with family or friends and then sit down to enjoy it together.','username' : 'Shep','date' : 'timestamp'})
+
+https://www.verywellfit.com/lime-pulled-chicken-tostadas-with-coleslaw-4144576
+db.posts.insert(
+{ _id :  getSequenceNextValue('itemId'),
+'body' : 'This low-FODMAP recipe utilizes a technique for poaching chicken, to keep it juicy and tender. The shredded chicken is then lightly dressed with lime juice and olive oil, and further enhanced by the lively flavors and crunchiness of the coleslaw. Tostadas are served like open-face sandwiches and are eaten out of hand. They can be a little messy, so serve them with plenty of napkins.','username' : 'Niles','date' : 'timestamp'})
+
+https://www.verywellfit.com/ratatouille-hash-with-fried-eggs-4142929
+db.posts.insert(
+{ _id :  getSequenceNextValue('itemId'),
+'body' : 'This vegetarian dish makes a nice weekend breakfast or brunch offering and is hearty enough to work as a quick weeknight “breakfast-for-dinner.” This tasty hash, minus the eggs, also makes a great vegetable side dish for a main meal. All of the ingredients are low in FODMAPs, so you can enjoy without triggering IBS symptoms.','username' : 'Benyamin','date' : 'timestamp'})
+
+https://www.verywellfit.com/seared-tuna-fish-salad-4142931
+db.posts.insert(
+{ _id :  getSequenceNextValue('itemId'),
+'body' : 'Fennel root, also known as anise, is a great stand-in for onion (a high-FODMAP ingredient) texture-wise. Like onions, it has an earthy root flavor—but with a licorice flavor all its own. Roasting mellows that flavor and also sweetens the taste. This delicious orange-fennel salsa serves as the dressing for seared tuna served on a bed of baby spinach.','username' : 'Fayre','date' : 'timestamp'})
+
+https://www.verywellfit.com/sweet-and-tangy-maple-roasted-root-vegetables-4142933
+db.posts.insert(
+{ _id :  getSequenceNextValue('itemId'),
+'body' : 'These savory-sweet and tangy vegetables are not only a great side dish, but can also be added to salads or tucked into cooked low-FODMAP grains like quinoa, rice, or buckwheat groats to liven them up. The tricks that add flavor are high heat and roasting in a single layer to allow maximum contact with the hot pan.','username' : 'Osbourn','date' : 'timestamp'})
+
+https://www.verywellfit.com/healthy-fish-tacos-4142932
+db.posts.insert(
+{ _id :  getSequenceNextValue('itemId'),
+'body' : 'These colorful fish tacos are Mexican-restaurant-tasty. Sautéing, instead of deep frying, the fish keeps them healthy and simplifies the preparation as well. While there are quite a few ingredients (all of them low-FODMAP) the recipe comes together quickly and the cooking time is minimal. The light and crunchy cabbage slaw can be a stand-alone recipe as a side dish for any meal.','username' : 'Benjy','date' : 'timestamp'})
+
+https://www.verywellfit.com/sweet-spiced-pork-kebabs-4142936
+db.posts.insert(
+{ _id :  getSequenceNextValue('itemId'),
+'body' : 'Pork and apples are a classic combination, but apples are high in FODMAPs. This IBS-friendly variation uses grapes instead of apples to lend sweetness, for a festive and attractive main dish or appetizer. Kebabs can be assembled ahead of time and refrigerated until grill-time for convenience.','username' : 'Clem','date' : 'timestamp'})
+
+https://www.verywellfit.com/banana-peanut-butter-smoothie-recipe-4142935
+db.posts.insert(
+{ _id :  getSequenceNextValue('itemId'),
+'body' : 'The two key ingredients to make thicker smoothies are frozen fruit and ground chia seeds. Prepare frozen bananas ahead of time to have on hand for smoothies. Peel the banana, break it into 6 pieces, and store them in the freezer in an airtight container or zip-top bag. Grinding chia seeds in the first step of this recipe increase their thickening power, plus you get some plant-based omega-3s.','username' : 'Zorine','date' : 'timestamp'})
+
+https://www.verywellfit.com/cappuccino-granita-recipe-4142934
+db.posts.insert(
+{ _id :  getSequenceNextValue('itemId'),
+'body' : 'A granita is a hand-made Italian frozen dessert with a slushy texture. This dessert is light and refreshing on a hot day and will appeal to all of you coffee lovers out there. Lactose-free milk makes it suitable for a low-FODMAP diet. It is very easy and requires little hands-on time, but plan ahead as it does take a number of hours to properly freeze.','username' : 'Diannne','date' : 'timestamp'})
+
+https://www.verywellfit.com/mediterranean-grilled-eggplant-salad-4142937
+db.posts.insert(
+{ _id :  getSequenceNextValue('itemId'),
+'body' : 'Every Mediterranean country seems to have its own version of a marinated eggplant salad. No wonder. It is a versatile and tasty dish that can be served as an appetizer or a side dish.
+
+Our low-FODMAP version owes its delicious flavor to toasting the pine nuts, roasting the vegetables, and using fresh lemon juice and herbs in the dressing.','username' : 'Dena','date' : 'timestamp'})
